@@ -14,8 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
+Route::get('/cal', function () {
+    return view('calculator');
+});
+
+Route::post('/calculate', 'FormController@calculator');
+
+// Route::get('/form', 'FormController@index');
+// Route::post('/proses', 'FormController@proses');
+
 // Route::get('/index', function () {
 //     return view('index');
 // });
